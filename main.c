@@ -1,11 +1,13 @@
 #include <stdio.h>
 #define MAX_SIZE 128
 
+//struct for product
 typedef struct{
   char name[MAX_SIZE];
   int total;
 }PRODUCT;
 
+//function for creating product
 void createProduct(PRODUCT *prod, PRODUCT products[MAX_SIZE], FILE *fp, int *total){
   while(getchar() != '\n');
   fp = fopen("products.dat", "a+");
@@ -20,6 +22,7 @@ void createProduct(PRODUCT *prod, PRODUCT products[MAX_SIZE], FILE *fp, int *tot
   fclose(fp);
 }
 
+//function for listing recently added products
 void listAllRecent(PRODUCT arr[MAX_SIZE], int total){
   printf("\n");
   for(int i = 0; i < total; i++){
@@ -29,6 +32,7 @@ void listAllRecent(PRODUCT arr[MAX_SIZE], int total){
   }
 }
 
+//function for listing all products using file i/o
 void listAll(PRODUCT *prod, FILE *fp){
   printf("\n");
   fp = fopen("products.dat", "r");
@@ -47,6 +51,7 @@ int main(int argc, char **argv){
   PRODUCT p;
   int size = 0;
   int opt = 0;
+  //menu loop
   while(opt != 5){
     printf("1. Add Product\n");
     printf("2. List All Recent\n");
