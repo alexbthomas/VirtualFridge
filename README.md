@@ -1,5 +1,5 @@
 # VirtualFridge
-This program was created using repl.it
-This is a virtual fridge program written in C.
-Please click the following link to access program: 
+My goal with this project was to practice File I/O and structs in C. 
+
+Click the following link to access program: 
 https://replit.com/join/cyfhhzvz-kurts03
